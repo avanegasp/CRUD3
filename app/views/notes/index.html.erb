@@ -1,0 +1,11 @@
+<h1>Estas son mis notas</h1>
+
+<%@notes.each do |note|%>
+  <ul>
+    <li><%=note.title%></li>
+    <li><%=note.body%></li>
+  </ul>
+  <%=link_to "ir al post", note_path(note.id)%>
+
+<%end%>
+<%=link_to "crear una nueva nota", new_note_path%>
