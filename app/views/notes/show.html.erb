@@ -1,12 +1,10 @@
 <h1> Acá va el show de notes</h1>
 
 <div>
-  <%=@notes.each do |note|%>
   <ul>
-    <li><%=note.first.title%></li>
-    <li><%=note.first.body%></li>
+    <li><%=@notes.title%></li>
+    <li><%=@notes.body%></li>
   </ul>
-  <%end%>
 </div>
 
 <%=link_to "ir a los post", notes_path%>

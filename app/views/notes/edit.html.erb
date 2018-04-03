@@ -1,0 +1,15 @@
+<h1>este es edit</h1>
+<%=form_for @note do |f|%>
+<div class="form_group">
+  <H5>Título:</H5><%= f.text_field :title, class: "form-control input-lg", placeholder:"Título de la nota"%>
+</div>
+<div class="form_group">
+  <H5>Contenido:</H5><%= f.text_area :body, class: "form-control input-lg", placeholder:"Contenido"%>
+</div>
+<br>
+<div>
+  <%=f.submit class: "btn btn-primary btn-lg btn-block" %>
+</div>
+  <%=link_to "ver todas las notas", notes_path%>
+
+<%end%>

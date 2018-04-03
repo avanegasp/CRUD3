@@ -6,6 +6,11 @@
     <li><%=note.body%></li>
   </ul>
   <%=link_to "ir al post", note_path(note.id)%>
+  <br>
+  <%=link_to "editar la nota", edit_note_path(note.id)%>
+  <%=link_to "borrar la nota", note_path(note.id), :method => "delete", data: {:confirm => "Are you sure?"} %>
 
 <%end%>
+<br>
+<br>
 <%=link_to "crear una nueva nota", new_note_path%>
